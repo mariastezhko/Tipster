@@ -351,7 +351,6 @@
                         <outlet property="tip20Total" destination="EBX-jb-KDB" id="1Zt-7C-1JW"/>
                         <outlet property="tipSlider" destination="eiq-gQ-2LU" id="gOl-Lp-XFT"/>
                         <outlet property="totalLabel" destination="iQj-mH-7MV" id="0nd-Pd-eOO"/>
-                        <outletCollection property="buttons" destination="bgG-uq-j5I" collectionClass="NSMutableArray" id="qAI-ib-jpt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

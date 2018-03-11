@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var groupSizeLabel: UILabel!
     @IBOutlet weak var tip15: UILabel!
-    
     @IBOutlet weak var tip20Total: UILabel!
     @IBOutlet weak var tip15Total: UILabel!
     @IBOutlet weak var tip10Total: UILabel!
@@ -25,40 +24,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var tip15PercentLabel: UILabel!
     @IBOutlet weak var tip10PercentLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    var clear: String = "0"
+    
+    var totalBeforeTip = ""
     var tip10Percent = 10
     var tip15Percent = 15
     var tip20Percent = 20
-    var totalBeforeTip = ""
-
-    @IBOutlet var buttons: [UIButton]!
+    
     
     @IBAction func tipSliderSlided(_ sender: UISlider) {
+        
         let groupSize = Double(groupSizeLabel.text!) ?? 1
         let tip10Amount = (Double(totalBeforeTip) ?? 0)*(Double(Int(sender.value + 10))/100)
         let tip15Amount = (Double(totalBeforeTip) ?? 0)*(Double(Int(sender.value + 15))/100)
         let tip20Amount = (Double(totalBeforeTip) ?? 0)*(Double(Int(sender.value + 20))/100)
         
         tip10PercentLabel.text = String(Int(sender.value + 10)) + "%"
-        tip10.text = String(tip10Amount/groupSize)
+        tip10.text = String(round(100*tip10Amount/groupSize)/100)
         if Double(totalBeforeTip) ?? 0 > 0
         {
-            let tip10TotalHelper = (tip10Amount) + Double(totalBeforeTip)!
-            tip10Total.text = String(tip10TotalHelper)
+            let tip10TotalTemp = (tip10Amount) + Double(totalBeforeTip)!
+            tip10Total.text = String(round(100*tip10TotalTemp)/100)
         }
         tip15PercentLabel.text = String(Int(sender.value + 15)) + "%"
-        tip15.text = String(tip15Amount/groupSize)
+        tip15.text = String(round(100*tip15Amount/groupSize)/100)
         if Double(totalBeforeTip) ?? 0 > 0
         {
-            let tip15TotalHelper = (tip15Amount) + Double(totalBeforeTip)!
-            tip15Total.text = String(tip15TotalHelper)
+            let tip15TotalTemp = (tip15Amount) + Double(totalBeforeTip)!
+            tip15Total.text = String(round(100*tip15TotalTemp)/100)
         }
         tip20PercentLabel.text = String(Int(sender.value + 20)) + "%"
-        tip20.text = String(tip20Amount/groupSize)
+        tip20.text = String(round(100*tip20Amount/groupSize)/100)
         if Double(totalBeforeTip) ?? 0 > 0
         {
-            let tip20TotalHelper = (tip20Amount) + Double(totalBeforeTip)!
-            tip20Total.text = String(tip20TotalHelper)
+            let tip20TotalTemp = (tip20Amount) + Double(totalBeforeTip)!
+            tip20Total.text = String(round(100*tip20TotalTemp)/100)
         }
 
     }
@@ -66,23 +65,21 @@ class ViewController: UIViewController {
     
     @IBAction func groupSliderSlided(_ sender: UISlider) {
         groupSizeLabel.text = String(Int(sender.value))
-        print(Int(sender.value))
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
         if sender.tag == 10
         {
-            clear = "0"
             totalBeforeTip = ""
-            dotButton.isEnabled = true
-            totalLabel.text = String(clear)
+            totalLabel.text = "0"
             tip10.text = "0"
             tip15.text = "0"
             tip20.text = "0"
             tip10Total.text = "0"
             tip15Total.text = "0"
             tip20Total.text = "0"
+            dotButton.isEnabled = true
         }
             
         else if sender.tag == 11
