@@ -33,19 +33,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Egi-R1-g3c">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="29"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozo-yp-tR6">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozo-yp-tR6">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" red="0.9771554938" green="1" blue="0.97872447529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhF-Iu-2pU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhF-Iu-2pU">
                                                 <rect key="frame" x="114.5" y="0.0" width="114" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" red="0.9771554938" green="1" blue="0.97872447529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eD-ke-Syx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eD-ke-Syx">
                                                 <rect key="frame" x="228.5" y="0.0" width="114.5" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" red="0.9771554938" green="1" blue="0.97872447529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -258,12 +258,15 @@
                                     <constraint firstAttribute="height" constant="290" id="TmC-5t-69Y"/>
                                 </constraints>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1dm-ld-HxG">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="1dm-ld-HxG">
                                 <rect key="frame" x="146" y="571" width="215" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="280-oG-f2c"/>
                                     <constraint firstAttribute="width" constant="211" id="Xrs-xy-1S0"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="groupSliderSlided:" destination="BYZ-38-t0r" eventType="valueChanged" id="7RC-rf-qgn"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBR-PP-dwf">
                                 <rect key="frame" x="16" y="525" width="101" height="34"/>
@@ -284,7 +287,7 @@
                                 <color key="textColor" red="0.9771554938" green="1" blue="0.97872447529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eiq-gQ-2LU">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="eiq-gQ-2LU">
                                 <rect key="frame" x="146" y="524" width="215" height="31"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -292,7 +295,7 @@
                                     <constraint firstAttribute="height" constant="30" id="xju-8K-WcQ"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="groupSliderSlided:" destination="BYZ-38-t0r" eventType="valueChanged" id="pL1-4S-YI1"/>
+                                    <action selector="tipSliderSlided:" destination="BYZ-38-t0r" eventType="valueChanged" id="sjQ-7s-Oec"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQn-AG-vJ7">
@@ -335,19 +338,18 @@
                     <connections>
                         <outlet property="billLabel" destination="iQj-mH-7MV" id="Nri-TJ-JdM"/>
                         <outlet property="dotButton" destination="IPw-Yq-nZh" id="ROh-1D-A2F"/>
-                        <outlet property="groupSizeLabel" destination="EQn-AG-vJ7" id="RIZ-SC-zPK"/>
+                        <outlet property="groupSizeLabel" destination="EQn-AG-vJ7" id="wYh-Kc-eUw"/>
                         <outlet property="groupSizeSlider" destination="1dm-ld-HxG" id="AxS-0B-9We"/>
                         <outlet property="tip10" destination="B8E-rg-DZ5" id="LPs-ZF-XO3"/>
                         <outlet property="tip10PercentLabel" destination="ozo-yp-tR6" id="va2-TQ-78c"/>
                         <outlet property="tip10Total" destination="hCs-3R-kgt" id="bXs-t6-ibV"/>
                         <outlet property="tip15" destination="jkV-YJ-c7D" id="DCf-UM-Mwm"/>
                         <outlet property="tip15PercentLabel" destination="NhF-Iu-2pU" id="MLO-jG-bkU"/>
-                        <outlet property="tip15Total" destination="jkV-YJ-c7D" id="4Hz-qU-is1"/>
+                        <outlet property="tip15Total" destination="LVs-dl-6VO" id="fOL-Y5-wZO"/>
                         <outlet property="tip20" destination="WDN-Nd-3ab" id="8jf-FZ-5Ei"/>
                         <outlet property="tip20PercentLabel" destination="0eD-ke-Syx" id="jnH-zp-bgo"/>
-                        <outlet property="tip20Total" destination="WDN-Nd-3ab" id="e6k-mh-8n5"/>
+                        <outlet property="tip20Total" destination="EBX-jb-KDB" id="1Zt-7C-1JW"/>
                         <outlet property="tipSlider" destination="eiq-gQ-2LU" id="gOl-Lp-XFT"/>
-                        <outlet property="tipSliderSlided" destination="1dm-ld-HxG" id="ngZ-gz-TWy"/>
                         <outlet property="totalLabel" destination="iQj-mH-7MV" id="0nd-Pd-eOO"/>
                         <outletCollection property="buttons" destination="bgG-uq-j5I" collectionClass="NSMutableArray" id="qAI-ib-jpt"/>
                     </connections>
